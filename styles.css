@@ -1,0 +1,103 @@
+body {
+  display: grid;
+  place-items: center;
+  font-family: "Nunito", sans-serif;
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+  color: rgb(238, 230, 230);
+  background: #2980b9;
+  background: -webkit-linear-gradient(to right, #ffffff, #6dd5fa, #2980b9);
+  background: linear-gradient(to right, #ffffff, #6dd5fa, #2980b9);
+}
+
+.main-container {
+  display: grid;
+  grid-template-columns: repeat(3, 10rem);
+  grid-template-rows: 5rem repeat(4, 10rem);
+  grid-template-areas:
+    "input button button"
+    "location location location"
+    "temp temp temp"
+    "temp temp temp"
+    "info info info";
+  background-image: url("https://bit.ly/3wrLzcu");
+  background-repeat: no-repeat;
+  background-position: -15rem;
+  padding: 2rem;
+  border-radius: 15px;
+}
+.sub-container0 {
+  grid-area: input;
+  display: flex;
+  align-items: center;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.zipInput {
+  background: white;
+  padding: 5px;
+  padding-left: 15px;
+  border-radius: 15px;
+  outline: none;
+  margin: 5px;
+  height: 20px;
+  width: 8rem;
+  border-style: solid;
+}
+
+.submit {
+  background: white;
+  padding-left: 15px;
+  padding-right: 15px;
+  border-radius: 15px;
+  border-style: solid;
+  height: 35px;
+  outline: none;
+}
+
+.submit:hover {
+  background: rgb(245, 242, 242);
+}
+
+.section-header {
+  margin: 0;
+}
+
+.sub-container1 {
+  grid-area: location;
+  background-color: rgba(0, 0, 0, 0.5);
+  height: 7rem;
+  width: 13rem;
+  padding-top: 5px;
+  padding-left: 10px;
+  border-radius: 10px;
+  margin: 5px;
+}
+
+.sub-container2 {
+  grid-area: temp;
+  background-color: rgba(0, 0, 0, 0.5);
+  height: 7rem;
+  width: 13rem;
+  padding-top: 5px;
+  padding-left: 10px;
+  border-radius: 10px;
+  margin: 5px;
+}
+
+.sub-container3 {
+  grid-area: info;
+  display: flex;
+  justify-content: space-between;
+  background-color: rgba(0, 0, 0, 0.5);
+  height: 7rem;
+  width: 28rem;
+  padding-top: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 10px;
+  margin: 5px;
+  text-align: center;
+}
