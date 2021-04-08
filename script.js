@@ -15,15 +15,9 @@ getDate()
 
 const getWeatherData = async ()=> {
 
-<<<<<<< HEAD
-    const zip = document.querySelector(".zipInput").value;
-    const data = await fetch(`http://api.openweathermap.org/data/2.5/weather?zip=${zip}&appid={apikey}units=imperial`);
-    const formattedJson = await data.json();
-=======
     const zip = document.querySelector(".zipInput").value
     const data = await fetch(`http://api.openweathermap.org/data/2.5/weather?zip=${zip}&appid={apikey}&units=imperial`)
     const formattedJson = await data.json()
->>>>>>> be3bc12479510aea780922000a577f6766de3461
 
     const city = document.querySelector(".location");
     city.innerHTML = formattedJson.name;
