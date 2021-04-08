@@ -16,7 +16,7 @@ body {
   grid-template-columns: repeat(3, 10rem);
   grid-template-rows: 5rem repeat(4, 10rem);
   grid-template-areas:
-    "input button button"
+    "input button date"
     "location location location"
     "temp temp temp"
     "temp temp temp"
@@ -55,6 +55,20 @@ body {
   border-style: solid;
   height: 35px;
   outline: none;
+}
+
+.date-div {
+  grid-area: date;
+  display: flex;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  height: 1.8rem;
+  width: 11rem;
+  padding: 5px;
+  margin-top: 20px;
+  margin-left: -35px;
+  border-radius: 10px;
+  justify-content: center;
 }
 
 .submit:hover {
