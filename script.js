@@ -36,19 +36,30 @@ const getWeatherData = async () => {
   city.innerHTML = formattedJson.name;
 
   const temp = document.querySelector(".temperature");
-  temp.innerHTML = formattedJson.main.temp + " °F";
+  temp.innerHTML = formattedJson.main.temp.toFixed(0) + " °F";
 
   const maxTemp = document.querySelector(".maxTemp");
-  maxTemp.innerHTML = formattedJson.main.temp_max + " °F";
+  maxTemp.innerHTML = formattedJson.main.temp_max.toFixed(0) + " °F";
 
   const minTemp = document.querySelector(".minTemp");
-  minTemp.innerHTML = formattedJson.main.temp_min + " °F";
+  minTemp.innerHTML = formattedJson.main.temp_min.toFixed(0) + " °F";
 
   const humidity = document.querySelector(".humidity");
-  humidity.innerHTML = formattedJson.main.humidity + "%";
+  humidity.innerHTML = formattedJson.main.humidity.toFixed(0) + "%";
 };
 
 const submit = document.querySelector(".submit");
-submit.addEventListener("click", () => getWeatherData());
+const input = document.querySelector(".zipInput");
+
+submit.addEventListener("click", function () {
+  getWeatherData();
+});
+
+input.addEventListener("keyup", function (event) {
+  if (event.keyCode === 13) {
+    event.preventDefault();
+    submit.click();
+  }
+});
 
 setInterval(getDate, 1000);
